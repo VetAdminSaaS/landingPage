@@ -23,14 +23,14 @@
 
       <div class="flex-1 flex justify-end items-center">
         <div class="hidden md:flex items-center space-x-8 mr-8">
-          <a [routerLink]="['/']" 
+          <a [routerLink]="['/home']" 
              class="relative text-gray-700 hover:text-indigo-600 px-1 py-2 text-lg font-medium transition-all duration-300 group"
              [class.text-indigo-600]="router.isActive('/', true)">
             <span class="relative z-10">Inicio</span>
             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 rounded-full transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100"
                   [class.scale-x-100]="router.isActive('/', true)"></span>
           </a>
-          <a [routerLink]="['/servicios']" 
+          <a [routerLink]="['services']" 
              class="relative text-gray-700 hover:text-indigo-600 px-1 py-2 text-lg font-medium transition-all duration-300 group"
              [class.text-indigo-600]="router.isActive('/servicios', false)">
             <span class="relative z-10">Servicios</span>
