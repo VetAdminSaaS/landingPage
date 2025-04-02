@@ -1,4 +1,4 @@
-<nav class="bg-gradient-to-br from-blue-50 to-indigo-50 backdrop-blur-lg border-blue-100" style="font-family: 'Barlow', sans-serif;">
+<nav class="bg-gradient-to-br from-purple-50 to-indigo-50 backdrop-blur-lg border-blue-100" style="font-family: 'Barlow', sans-serif;">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
    
@@ -23,14 +23,14 @@
 
       <div class="flex-1 flex justify-end items-center">
         <div class="hidden md:flex items-center space-x-8 mr-8">
-          <a [routerLink]="['/']" 
+          <a [routerLink]="['/home']" 
              class="relative text-gray-700 hover:text-indigo-600 px-1 py-2 text-lg font-medium transition-all duration-300 group"
              [class.text-indigo-600]="router.isActive('/', true)">
             <span class="relative z-10">Inicio</span>
             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 rounded-full transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100"
                   [class.scale-x-100]="router.isActive('/', true)"></span>
           </a>
-          <a [routerLink]="['/servicios']" 
+          <a [routerLink]="['services']" 
              class="relative text-gray-700 hover:text-indigo-600 px-1 py-2 text-lg font-medium transition-all duration-300 group"
              [class.text-indigo-600]="router.isActive('/servicios', false)">
             <span class="relative z-10">Servicios</span>
@@ -43,6 +43,13 @@
             <span class="relative z-10">Clínicas</span>
             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 rounded-full transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100"
                   [class.scale-x-100]="router.isActive('/clinicas', false)"></span>
+          </a>
+          <a [routerLink]="['/planes']" 
+             class="relative text-gray-700 hover:text-indigo-600 px-1 py-2 text-lg font-medium transition-all duration-300 group"
+             [class.text-indigo-600]="router.isActive('/planes', false)">
+            <span class="relative z-10">Planes</span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 rounded-full transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100"
+                  [class.scale-x-100]="router.isActive('/planes', false)"></span>
           </a>
           <a [routerLink]="['/contacto']" 
              class="relative text-gray-700 hover:text-indigo-600 px-1 py-2 text-lg font-medium transition-all duration-300 group"
@@ -105,14 +112,14 @@
          [class.max-h-screen]="isMenuOpen"
          [class.shadow-lg]="isMenuOpen">
       <div class="px-4 pt-3 pb-6 space-y-2">
-        <a [routerLink]="['/']" 
+        <a [routerLink]="[]" 
            (click)="toggleMenu()"
            class="block text-gray-700 hover:bg-blue-50 hover:text-indigo-600 px-4 py-3 rounded-lg text-base font-medium transition-colors duration-300"
            [class.bg-blue-50]="router.isActive('/', true)"
            [class.text-indigo-600]="router.isActive('/', true)">
           Inicio
         </a>
-        <a [routerLink]="['/servicios']" 
+        <a [routerLink]="['servicios']" 
            (click)="toggleMenu()"
            class="block text-gray-700 hover:bg-blue-50 hover:text-indigo-600 px-4 py-3 rounded-lg text-base font-medium transition-colors duration-300"
            [class.bg-blue-50]="router.isActive('/servicios', false)"
@@ -125,6 +132,13 @@
            [class.bg-blue-50]="router.isActive('/clinicas', false)"
            [class.text-indigo-600]="router.isActive('/clinicas', false)">
           Clínicas
+        </a>
+          <a [routerLink]="['/planes']" 
+          (click)="toggleMenu()"
+          class="block text-gray-700 hover:bg-blue-50 hover:text-indigo-600 px-4 py-3 rounded-lg text-base font-medium transition-colors duration-300"
+          [class.bg-blue-50]="router.isActive('/planes', false)"
+          [class.text-indigo-600]="router.isActive('/planes', false)">
+        Planes
         </a>
         <a [routerLink]="['/contacto']" 
            (click)="toggleMenu()"
