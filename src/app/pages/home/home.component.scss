@@ -1,0 +1,121 @@
+// Variables
+$primary-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+$secondary-color: #4f46e5;
+$ring-color: rgba(99, 102, 241, 0.5);
+$transition-time: 0.3s;
+
+
+@mixin button-base {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all $transition-time ease;
+}
+
+@mixin hover-effect {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(79, 70, 229, 0.25);
+}
+
+
+section {
+  padding: 0 1rem;
+
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+    
+    &-delay {
+      animation: float 8s ease-in-out 2s infinite;
+    }
+  }
+
+
+  .perspective-container {
+    perspective: 1500px;
+
+    .transform-style-preserve-3d {
+      transform-style: preserve-3d;
+      transition: transform 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+
+      &:hover {
+        transform: rotateY(10deg) translateY(-5px);
+      }
+    }
+  }
+
+
+  .btn {
+    &-primary {
+      @include button-base;
+      background: $primary-gradient;
+      color: white;
+      box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+
+      &:hover {
+        @include hover-effect;
+      }
+    }
+
+    &-secondary {
+      @include button-base;
+      background: white;
+      color: $secondary-color;
+      border: 1px solid #e0e7ff;
+
+      &:hover {
+        background: #f8fafc;
+        @include hover-effect;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+
+  .highlight-text {
+    background: $primary-gradient;
+    background-repeat: no-repeat;
+    background-size: 100% 35%;
+    background-position: 0 90%;
+    padding: 0 2px;
+  }
+
+
+  @keyframes pulse-rocket {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+  }
+
+  .group:hover .animate-pulse {
+    animation: pulse-rocket 1.5s infinite;
+  }
+
+
+  button.loading {
+    .loading-state {
+      display: flex;
+    }
+  }
+
+
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $ring-color;
+    position: relative;
+    z-index: 1;
+  }
+
+
+  @media (max-width: 768px) {
+    button {
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+}

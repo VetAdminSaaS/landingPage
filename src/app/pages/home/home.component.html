@@ -1,169 +1,124 @@
 <app-navbar></app-navbar>
 
-<!-- Sección Hero - Diseño Espaciado -->
-<section class="relative bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden py-20 lg:py-28">
-  <!-- Decoración abstracta de fondo -->
-  <div class="absolute inset-0 overflow-hidden">
-    <div class="absolute top-0 left-0 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
-    <div class="absolute bottom-0 right-0 w-80 h-80 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float-delay"></div>
+<section class="relative min-h-[90vh] bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 overflow-hidden" style="font-family: 'Barlow', sans-serif;">
+  
+
+  <div class="absolute inset-0">
+    <div class="absolute top-20 -left-20 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob"></div>
+    <div class="absolute top-60 right-0 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-32 left-1/3 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-4000"></div>
   </div>
 
-  <!-- Contenido principal con grid bien estructurado -->
-  <div class="relative container mx-auto px-4">
+  <div class="relative container mx-auto px-6 lg:px-16 py-28">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
       
-      <div class="space-y-10">
-        <div class="space-y-6">
-          <h1 class="text-5xl md:text-6xl font-bold leading-tight">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">VetSoft Pro</span>
-          </h1>
-          <p class="text-3xl md:text-4xl font-semibold text-gray-800">
-            La plataforma que <span class="highlight-text">revoluciona</span> la gestión veterinaria
-          </p>
-        </div>
 
+      <div class="space-y-8 relative z-10">
+        <h1 class="text-6xl md:text-7xl font-black text-gray-900 leading-tight">
+          <span class="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent animate-gradient">
+            Revoluciona
+          </span>
+          <br>
+          <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            Tu Veterinaría
+          </span>
+        </h1>
+
+        <div class="relative group">
+          <p class="text-2xl md:text-3xl text-gray-800 font-medium transform transition-all duration-500 group-hover:translate-x-2">
+            Con <span class="underline-animation">VetAdmin Pro</span> 
+            <span class="text-teal-600 font-bold">+32%</span> de eficiencia
+          </p>
+          <div class="absolute bottom-0 w-32 h-1 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
 
         <p class="text-xl text-gray-600 leading-relaxed max-w-2xl">
-          Un sistema integral diseñado por veterinarios para veterinarios. 
-          <span class="font-medium text-indigo-600">Optimiza cada proceso</span> de tu clínica con herramientas 
-          especializadas y flujos de trabajo intuitivos.
+          La plataforma todo-en-uno que transforma la gestión veterinaria con 
+          <span class="font-bold text-purple-600">Inteligencia Artificial</span> y 
+          <span class="font-bold text-blue-600">Flujos Automatizados</span>
         </p>
 
-        <!-- Estadísticas en cards separadas -->
-        <div class="grid grid-cols-3 gap-4 pt-4">
-          <div class="bg-white p-4 rounded-xl shadow-sm text-center border border-gray-100">
-            <div class="text-2xl font-bold text-blue-600">+5K</div>
-            <div class="text-gray-500 text-sm">Clínicas</div>
-          </div>
-          <div class="bg-white p-4 rounded-xl shadow-sm text-center border border-gray-100">
-            <div class="text-2xl font-bold text-indigo-600">98%</div>
-            <div class="text-gray-500 text-sm">Satisfacción</div>
-          </div>
-          <div class="bg-white p-4 rounded-xl shadow-sm text-center border border-gray-100">
-            <div class="text-2xl font-bold text-purple-600">24/7</div>
-            <div class="text-gray-500 text-sm">Soporte</div>
-          </div>
-        </div>
-
-        <!-- Botones con espacio y jerarquía clara -->
-        <div class="flex flex-wrap gap-4 pt-8">
-          <button class="btn-primary">
-            <i class="fas fa-play-circle mr-2"></i> Demo Interactiva
+   
+        <div class="flex flex-wrap gap-4 mt-10">
+          <!-- Botón Primario con Efecto Profundo -->
+          <button class="group relative w-full md:w-auto px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-2xl text-base md:text-lg font-bold transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl shadow-indigo-300/50 hover:shadow-indigo-400/30 flex items-center justify-center gap-2 overflow-hidden">
+            
+            <!-- Efecto de brillo al hover -->
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+              <div class="absolute top-0 left-1/4 w-1/2 h-full bg-gradient-to-r from-white/50 to-transparent transform -skew-x-12"></div>
+            </div>
+            
+            <!-- Icono animado -->
+            <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:animate-pulse" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            
+            <span class="relative z-10">Demo Interactiva</span>
+            
+            <!-- Efecto de carga (puede activarse con Alpine.js al hacer click) -->
+            <div class="absolute inset-0 hidden items-center justify-center bg-indigo-700 loading-state">
+              <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+            </div>
           </button>
-          <button class="btn-secondary">
-            <i class="fas fa-book-open mr-2"></i> Ver Casos de Éxito
+        
+          <!-- Botón Secundario con Borde Animado -->
+          <button class="group relative w-full md:w-auto px-6 py-3 md:px-8 md:py-4 bg-white dark:bg-gray-800 border-2 border-indigo-100 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-2xl text-base md:text-lg font-bold transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-indigo-300 dark:hover:border-indigo-500 flex items-center justify-center gap-2">
+            
+            <!-- Borde animado -->
+            <div class="absolute inset-0 rounded-2xl overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+            </div>
+            
+            <!-- Icono con animación -->
+            <svg class="w-5 h-5 md:w-6 md:h-6 text-purple-600 dark:text-purple-400 group-hover:animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+            
+            <span>Ver Estadísticas</span>
           </button>
         </div>
+        
+       
       </div>
 
-      <!-- Columna derecha - Visual 3D con espacio -->
-      <div class="relative">
-        <!-- Contenedor de la tarjeta 3D con margen -->
-        <div class="perspective-container mx-auto lg:mx-0 max-w-lg">
-          <!-- Tarjeta con efecto 3D y profundidad -->
-          <div class="card-3d transform-style-preserve-3d hover:rotate-y-10">
-            <!-- Imagen principal con marco decorativo -->
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-              <img 
-                src="https://github.com/Diego-Luiz/veterinario-landing-page/blob/master/assets/images/img-card-01-desktop.png?raw=true" 
-                alt="Veterinario usando software con tablet"
-                class="w-full h-auto object-cover"
-              >
-              <!-- Efecto vidrio en esquina -->
-              <div class="absolute top-6 right-6 bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-md">
-                <div class="flex items-center">
-                  <div class="bg-blue-100 p-2 rounded-full mr-2">
-                    <i class="fas fa-heartbeat text-blue-600"></i>
-                  </div>
-                  <span class="text-sm font-bold">Historial Activo</span>
-                </div>
+
+      <div class="relative group perspective-2000 transform hover:scale-[1.02] transition-transform duration-500">
+        <div class="relative z-10 rounded-3xl shadow-2xl overflow-hidden border-8 border-white transform rotate-y-12 rotate-x-2 group-hover:rotate-y-6 transition-transform duration-700">
+          <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-4">
+            <!-- Barra superior del dispositivo -->
+            <div class="flex justify-between items-center mb-4 text-gray-400">
+              <div class="flex space-x-1">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <span class="text-sm">VetAdmin Pro v1.0</span>
+            </div>
+            
+      
+            <div class="relative h-96 overflow-hidden">
+              <div class="absolute inset-0 flex animate-slide">
+                <img src="https://i.postimg.cc/RF6YPKjn/image.png" class="w-full h-full object-cover" alt="Dashboard">
+                <img src="https://i.postimg.cc/ydMb2WHp/image.png" class="w-full h-full object-cover" alt="Calendar">
+                <img src="assets/patient-profile.jpg" class="w-full h-full object-cover" alt="Patient Profile">
               </div>
             </div>
-
-            <!-- Elementos decorativos flotantes -->
-            <div class="absolute -top-6 -left-6 w-24 h-24 bg-yellow-100 rounded-full opacity-40 blur-xl"></div>
-            <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-100 rounded-full opacity-30 blur-xl"></div>
           </div>
         </div>
+        
+ 
+        <div class="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent rounded-3xl"></div>
+        
 
-        <!-- Nota flotante al pie -->
-        <div class="absolute -bottom-6 left-1/4 bg-white p-4 rounded-xl shadow-lg border border-gray-100">
-          <div class="flex items-center space-x-3">
-            <div class="bg-green-100 p-2 rounded-full">
-              <i class="fas fa-check-circle text-green-600"></i>
-            </div>
-            <span class="text-sm font-medium">Sistema certificado HIPAA</span>
-          </div>
-        </div>
+        <div class="absolute -inset-4 bg-blue-100/30 blur-3xl opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- Estilos personalizados -->
-<style>
-  /* Espaciados y contenedores */
-  section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 
-  /* Animaciones sutiles */
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-  }
-  .animate-float { animation: float 8s ease-in-out infinite; }
-  .animate-float-delay { animation: float 8s ease-in-out 2s infinite; }
-
-  /* Efecto 3D controlado */
-  .perspective-container {
-    perspective: 1500px;
-  }
-  .transform-style-preserve-3d {
-    transform-style: preserve-3d;
-    transition: transform 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  }
-  .card-3d:hover {
-    transform: rotateY(10deg) translateY(-5px);
-  }
-
-  /* Botones con jerarquía clara */
-  .btn-primary {
-    background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.75rem;
-    font-weight: 600;
-    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
-    transition: all 0.3s ease;
-  }
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(79, 70, 229, 0.25);
-  }
-
-  .btn-secondary {
-    background: white;
-    color: #4f46e5;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.75rem;
-    font-weight: 600;
-    border: 1px solid #e0e7ff;
-    transition: all 0.3s ease;
-  }
-  .btn-secondary:hover {
-    background: #f8fafc;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  }
-
-  /* Texto destacado */
-  .highlight-text {
-    background: linear-gradient(120deg, #4f46e5 0%, #06b6d4 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 35%;
-    background-position: 0 90%;
-    padding: 0 2px;
-  }
-</style>
