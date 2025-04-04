@@ -42,6 +42,11 @@ export class ContactComponent {
       question: '¿Puedo integrar el software con otras herramientas que uso?',
       answer: 'Sí, nuestro software se integra fácilmente con una variedad de herramientas y plataformas populares. Ofrecemos API y documentación para facilitar la integración.',
       isOpen: false
+    },
+    {
+      question: '¿Qué tipo de formación ofrecen para nuevos usuarios?',
+      answer: 'Ofrecemos formación en línea y recursos de autoayuda para nuevos usuarios. También puedes solicitar sesiones de formación personalizadas si lo prefieres.',  
+      isOpen: false
     }
   ];
 
