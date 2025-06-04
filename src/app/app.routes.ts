@@ -7,6 +7,10 @@ export const routes: Routes = [
     {
         path: '',
         loadChildren: () => import('./pages/landing.routes').then(m=> m.landingRoutes),
+    },
+    {
+        path: 'auth',
+        loadChildren: () => import('./pages/authentication/authentication.routes').then(m=> m.authenticationRoutes),
     }
 
 ];

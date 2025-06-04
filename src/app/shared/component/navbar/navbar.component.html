@@ -27,20 +27,14 @@
             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 rounded-full transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100"
                   [class.scale-x-100]="router.isActive('/', true)"></span>
           </a>
-          <a [routerLink]="['services']" 
+          <a [routerLink]="['/services']" 
              class="relative text-gray-700 hover:text-indigo-600 px-1 py-2 text-lg font-medium transition-all duration-300 group"
              [class.text-indigo-600]="router.isActive('/servicios', false)">
             <span class="relative z-10">Servicios</span>
             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 rounded-full transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100"
                   [class.scale-x-100]="router.isActive('/servicios', false)"></span>
           </a>
-          <a [routerLink]="['/clinicas']" 
-             class="relative text-gray-700 hover:text-indigo-600 px-1 py-2 text-lg font-medium transition-all duration-300 group"
-             [class.text-indigo-600]="router.isActive('/clinicas', false)">
-            <span class="relative z-10">Clínicas</span>
-            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 rounded-full transition-all duration-300 transform origin-left scale-x-0 group-hover:scale-x-100"
-                  [class.scale-x-100]="router.isActive('/clinicas', false)"></span>
-          </a>
+        
           <a [routerLink]="['/planes']" 
              class="relative text-gray-700 hover:text-indigo-600 px-1 py-2 text-lg font-medium transition-all duration-300 group"
              [class.text-indigo-600]="router.isActive('/planes', false)">
@@ -109,27 +103,21 @@
          [class.max-h-screen]="isMenuOpen"
          [class.shadow-lg]="isMenuOpen">
       <div class="px-4 pt-3 pb-6 space-y-2">
-        <a [routerLink]="[]" 
+        <a [routerLink]="['/home']" 
            (click)="toggleMenu()"
            class="block text-gray-700 hover:bg-blue-50 hover:text-indigo-600 px-4 py-3 rounded-lg text-base font-medium transition-colors duration-300"
            [class.bg-blue-50]="router.isActive('/', true)"
            [class.text-indigo-600]="router.isActive('/', true)">
           Inicio
         </a>
-        <a [routerLink]="['servicios']" 
+        <a [routerLink]="['/services']" 
            (click)="toggleMenu()"
            class="block text-gray-700 hover:bg-blue-50 hover:text-indigo-600 px-4 py-3 rounded-lg text-base font-medium transition-colors duration-300"
            [class.bg-blue-50]="router.isActive('/servicios', false)"
            [class.text-indigo-600]="router.isActive('/servicios', false)">
           Servicios
         </a>
-        <a [routerLink]="['/clinicas']" 
-           (click)="toggleMenu()"
-           class="block text-gray-700 hover:bg-blue-50 hover:text-indigo-600 px-4 py-3 rounded-lg text-base font-medium transition-colors duration-300"
-           [class.bg-blue-50]="router.isActive('/clinicas', false)"
-           [class.text-indigo-600]="router.isActive('/clinicas', false)">
-          Clínicas
-        </a>
+       
           <a [routerLink]="['/planes']" 
           (click)="toggleMenu()"
           class="block text-gray-700 hover:bg-blue-50 hover:text-indigo-600 px-4 py-3 rounded-lg text-base font-medium transition-colors duration-300"
