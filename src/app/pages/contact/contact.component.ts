@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from "../../shared/component/footer/footer.component";
-import { NavbarComponent } from "../../shared/component/navbar/navbar.component";
-import { FaqItem } from '../../shared/model/faq.model';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from '../../shared/component/footer/footer.component';
+import { NavbarComponent } from '../../shared/component/navbar/navbar.component';
+import { FaqItem } from '../../shared/model/faq.model';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FooterComponent, NavbarComponent, CommonModule],
+  imports: [CommonModule, NavbarComponent, FooterComponent, CommonModule,FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  selectedStage: string = '';
   faqItems: FaqItem[] = [
     {
       question: '¿Cómo programo una demo personalizada?',
@@ -23,11 +25,7 @@ export class ContactComponent {
       answer: 'Aceptamos todas las tarjetas de crédito y débito principales, transferencias bancarias y PayPal. También ofrecemos facturación para empresas.',
       isOpen: false
     },
-    {
-      question: '¿Ofrecen soporte técnico 24/7?',
-      answer: 'El soporte 24/7 está disponible para los planes Empresa. Para otros planes, ofrecemos soporte prioritario en horario comercial con tiempos de respuesta garantizados.',
-      isOpen: false
-    },
+    
     {
       question: '¿Puedo cancelar mi suscripción en cualquier momento?',
       answer: 'Sí, puedes cancelar tu suscripción en cualquier momento. No hay contratos a largo plazo y no cobramos tarifas de cancelación anticipada.',
@@ -35,7 +33,7 @@ export class ContactComponent {
     },
     {
       question: '¿Cómo se manejan los datos de mis pacientes?',
-      answer: 'Nos tomamos muy en serio la privacidad de los datos. Todos los datos se almacenan de forma segura y cumplen con las normativas de protección de datos. Puedes consultar nuestra política de privacidad para más detalles.',
+      answer: 'Nos tomamos muy en serio la privacidad de los datos. Todos los datos se almacenan de forma segura y cumplen con las normativas de protección de datos.',
       isOpen: false
     },
     {
@@ -51,16 +49,11 @@ export class ContactComponent {
   ];
 
   toggleFaqItem(item: FaqItem): void {
-  
     this.faqItems.forEach(i => {
       if (i !== item) {
         i.isOpen = false;
       }
     });
-    
-
     item.isOpen = !item.isOpen;
   }
 }
-
-
